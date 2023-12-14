@@ -7,10 +7,9 @@ xeriscapes xerochasy inexplicably exabyte inexpressibly
 extremity xiphophyllous xylographic complexly vexillology
 xanthenes xylenol xylol xylenes coextensively
 """
-# Find all words that start with 'x' and end with 'y'. Write a python program for it.
+# Find all words that start with 'x' and end with 'y' from above variable 'txt'. Write a python program for it.
 
 import re
-
 
 pattern = r"\bx\w+y\b"
 

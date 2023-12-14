@@ -19,6 +19,24 @@
 
 # print(dict)
 
+import re
+
+config = """
+3 = foobar
+14=baz  
+9=fizzbuzz
+21=more_stuff,here
+"""
+
+dict = {}
+pairs = re.split(r"\s*=\s*", config)
+for pair in pairs:
+   key, value = pair.split('=')
+   dict[key] = value
+
+print(dict)
+
+
 # I got this error!! Fix it! key, value = pair.split()ValueError: not enough values to unpack (expected 2, got 1)
 # config = """
 # 3 = foobar
@@ -58,16 +76,16 @@
 #   dict[key] = value
 
 # print(dict)
-import re
+# import re
 
-config = """
-3 = foobar
-14=baz  
-9=fizzbuzz
-21=more_stuff,here 
-"""
-dict = {}
-pairs = re.split(r"\s*=\s*", config)
+# config = """
+# 3 = foobar
+# 14=baz  
+# 9=fizzbuzz
+# 21=more_stuff,here 
+# """
+# dict = {}
+# pairs = re.split(r"\s*=\s*", config)
 
 # 또 틀린 답
 # for pair in pairs:
@@ -79,11 +97,11 @@ pairs = re.split(r"\s*=\s*", config)
 #     continue
 
 #   dict[key] = value
-for pair in pairs:
-  parts = pair.split(maxsplit=1)
-  key = parts[0]
-  value = parts[1] if len(parts) > 1 else ""
+# for pair in pairs:
+#   parts = pair.split(maxsplit=1)
+#   key = parts[0]
+#   value = parts[1] if len(parts) > 1 else ""
 
-  dict[key] = value
+#   dict[key] = value
 
-print(dict)
+# print(dict)

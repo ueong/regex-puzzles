@@ -8,5 +8,6 @@ config = """
 """
 
 print(dict(re.findall(r'(\d+) *= *(.*)$', config, re.MULTILINE)))
+print(re.findall(r'(\d+) *= *(.*)$', config, re.MULTILINE))
 
 print({int(k): v for k, v in re.findall(r'(\d+) *= *(.*)$', config, re.MULTILINE)})
